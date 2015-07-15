@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="popup.js"></script>
+
+        <style type="text/css">
+            select, input, textarea{
+                padding: 3px;
+                border-radius: 3px;
+                color: #222;
+                box-sizing: border-box;
+                border-color: #bbb;
+            }
+            textarea{
+                font-size: 11px;
+            }
+            button{
+                display: inline-block;
+                padding: 3px 10px;
+                margin-bottom: 0;
+                font-size: 12px;
+                text-align: center;
+                line-height: 1.5;
+                border-radius: 3px;
+                color: #FFF;
+                background-color: #646464;
+                border: 0px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="min-width: 450px;">
+            <form action="" method="post">
+                <div>
+                    <select id="host" style="float:left;"></select>
+
+                    <label for="enabled" style="float:right;">
+                        Enable <strong> external JS</strong> for this host
+                        <input id="enabled" type="checkbox" style="position:relative;top:3px;" />
+                    </label>
+                </div>
+
+                <br /><br />
+
+                <textarea id="scripts" style="width: 100%; min-height: 75px;" placeholder="Enter URLs to javascript files you would like to inject here, one per row."></textarea>
+
+                <button type="submit" id="save">Save</button>
+            </form>
+        </div>
+    </body>
+</html>
