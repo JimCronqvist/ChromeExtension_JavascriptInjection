@@ -1,18 +1,18 @@
 
-function injectScript(src, where)
+function injectScript(src)
 {
     var element = document.createElement('script');
     element.src = src;
-    document[where || 'head'].appendChild(element);
+    (document.head||document.documentElement).appendChild(element);
 }
 
-function injectCss(src, where)
+function injectCss(src)
 {
     var element = document.createElement('link');
     element.rel = 'stylesheet';
     element.type = 'text/css';
     element.href = src;
-    document[where || 'head'].appendChild(element);
+    (document.head||document.documentElement).appendChild(element);
 }
 
 if(typeof String.prototype.endsWith !== 'function')
